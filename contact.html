@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="card">
+        <img src="https://lh3.googleusercontent.com/ozI7j3lF6R0Ifn7C5p8q1Vc4NxZiXf5S7XOur1dNOpmIizpPFSWGzkZfeX-arW4tpM1JLGs-lImQHRe7AgOP0sui-rHar8e70mWR04I5cfH6hpEhlNgluaF8egZGDxemZJ2HQOpmW-JAMofLcVWHotbVN3eKzqeXvYf4u8lVqR_K4qSRHpBK2SIm7SMb8lFSPv1QU1XfAvzA-NuJRPCkUAkZE_tkxp0q8amb0yxlyJZM2hFj-Wh6YRvCzcUlBCzEAWh3nb3FmStJAXxBW0WCD50qeK5BSKN4Hp_PBIbsVNCFF0LUIHvQckhbX8DiAvvJqou0JLuQ2YIJFzfQSVgNVqlh44zCOS2ME2JMHGF8KsEWM6D3h0P_id9DIaGtbKorODblGzQX1u3En5IjvBm7fFR_Up4fCik2Mkt84n04AsreIu0VkYiVs8xs6a2OMqAI7aRixKEIFWbB2E6AplEc2jJJK41CHgldG-fXIybJxgkqWiPldEJRWPxPhKf0dekZDtS1Ei2RGIEGkvDDCFhIgXmIfaJtuWUvynk53DkFJXwFJ6U6NRDkK3dbEGy4CEfVO1PDeYdjNhtbCW7iegwY9huQ_DfddBavuOtN-058eW-9nmlllYvJdR67dxurSfiBTu8fX3Ziu56t1puUq8hRy86fXSFDbw2YXGOJ5sfScvVRcPNClsvgRPPks2wZf5VzX9tgxxRQN7vmajKGLEMue5Icl9bCG7HCUmojBRxvHSeHn6ki_A-92SKLDQ=w828-h793-no?authuser=0" alt="Alex" style="width:100%">
+        <h1>Alex Nguyen</h1>
+        <p class="title">Undergraduate student</p>
+        <p>University of Tennessee</p>
+        <a href="https://github.com/bolophil"><i class="fa fa-github"></i></a>
+        <a href="https://www.facebook.com/chau.nguyen.1656"><i class="fa fa-facebook"></i></a> 
+        <a href="https://www.instagram.com/bolophil/"><i class="fa fa-instagram"></i></a>
+        <p><span id="dots"></span><span id="more">
+           Email: hnguye48@vols.utk.edu <br> Phone: 714-728-7191
+        </span></p>
+        <button onclick="readmore()" id="myBtn">Contact</button>
+      </div>
+</body>
+</html>
+
+
+
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+/* read more button*/ 
+#more {display: none;}
+</style>
+
+<script>
+function readmore() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Contact";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Close";
+    moreText.style.display = "inline";
+  }
+}
+</script>
