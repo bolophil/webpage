@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="script.js" ></script>
 </head>
 <body>
     <div id="mySidebar" class="sidebar">
@@ -19,8 +20,15 @@
       
       <div id="main">
         <button class="openbtn" onclick="openNav()">&#9776; MENU</button>
-        <h2>Collapsed Sidebar</h2>
-        <p>Content...</p>
+        
       </div>
+      
+      <form id="search" method="get" action="https://www.google.com/images">
+        <input class="search textbox" type="text" placeholder="Search...">
+        <input class="search submit-button" type="button" type="submit" value="">
+     </form>
+     <canvas id="gameCanvas" width="600" height="600"></canvas>
+  
+
 </body>
 </html>
