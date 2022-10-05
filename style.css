@@ -135,11 +135,24 @@ border:none;
 .submit-button:hover{
   background-color: #444;
 }
-
-canvas {
-  background: black;
-  padding: 0;
-  margin: 0 auto;
-  margin-bottom: 1rem;
-  display: block;
+.container{
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+.control{
+  display: flex;
+}
+.control > input{
+  border: 2px solid gray;
+  width:60%;
+}
+.control > label{
+  font-size:15px;
+  width:35%;
+}
+ canvas {
+  background: black;
+  border: 5px solid tan
+} 

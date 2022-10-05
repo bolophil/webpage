@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" ></script>
+    
 </head>
 <body>
     <div id="mySidebar" class="sidebar">
@@ -17,7 +17,6 @@
         <a href="#">Clients</a>
         <a href="contact.html">Contact</a>
       </div>
-      
       <div id="main">
         <button class="openbtn" onclick="openNav()">&#9776; MENU</button>
         
@@ -27,8 +26,15 @@
         <input class="search textbox" type="text" placeholder="Search...">
         <input class="search submit-button" type="button" type="submit" value="">
      </form>
-     <canvas id="gameCanvas" width="600" height="600"></canvas>
-  
-
+      </div>
+    <div class="container">
+     <canvas id = "canvas1"></canvas>
+    
+     <div class="control">
+        <label for="resolution" id="resolutionLabel">Resolution</label>
+        <input type="range" id="resolution" name="resolution" min="1" max="20" value="5">
+     </div>
+     </div>
+     <script src="script.js" ></script
 </body>
 </html>
