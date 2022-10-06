@@ -118,22 +118,8 @@ padding: 12px 20px;
  width: 600px;
 }
 
-.submit-button {
-background-image: url("https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png");
-line-height: inherit;
-text-decoration: none;
-cursor: pointer;
-width: 35px;
-background-position: 5px;
-background-repeat: no-repeat;
-background-size: 20px;
-background-color: transparent;
-margin-left:-45px;
-border:none;
-}
-
-.submit-button:hover{
-  background-color: #444;
+.submit:hover{
+  background-color: white;
 }
 .container{
   position:absolute;

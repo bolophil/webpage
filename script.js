@@ -9,11 +9,48 @@ function closeNav() {
   document.getElementById("main").style.marginLeft = "0";
 }
 
+const image1 = new Image();
+//image1.src = 'pexels-photo-1108099.jpeg';
+//image1.src = '5616.jpg';
+var keys = document.getElementById("key");
+var button=document.getElementById("sb");
+function searchfun(){
+  var xhr = new XMLHttpRequest();       
+    xhr.open("GET", keys.value, true); 
+    xhr.responseType = "blob";
+    xhr.onload = function (e) {
+      var reader = new FileReader();
+      reader.onload = function(event) {
+          var res = event.target.result;
+          image1.src = res;
+      }
+      var file = this.response;
+      reader.readAsDataURL(file)
+    };
+    xhr.send()
+ 
+}
+
+button.addEventListener('click', searchfun);
+
+const image_input = document.getElementById("image_input");
+var uploaded_image = "";
+image_input.addEventListener("change", function(){
+  const reader = new FileReader();
+  reader.addEventListener("load", ()=>{
+    uploaded_image = reader.result;
+    image1.src = uploaded_image;
+  });
+  reader.readAsDataURL(this.files[0]);
+});
+
+
+
+
 const canvas = document.getElementById('canvas1');
 const ctx = canvas.getContext('2d');
 
-const image1 = new Image();
-image1.src = 'pexels-photo-1108099.jpeg';
+
 var s = 'Ñ@#W$9876543210?!abc;:+=-,._ ';
 const inputSlider = document.getElementById('resolution');
 const inputLabel = document.getAnimations('resoltionLabel');
@@ -90,7 +127,7 @@ class Ascii{
 let effect;
 function handleSlider(){
   if(inputSlider.value == 1){
-    inputLabel.innerHTML = 'Origianl image';
+    inputLabel.innerHTML = 'Original image';
     ctx.drawImage(image1, 0 ,0, canvas.width, canvas.height);
   }
   else{
@@ -103,5 +140,5 @@ image1.onload = function initialize(){
   canvas.width = image1.width;
   canvas.height = image1.height;
   effect = new Ascii(ctx, canvas.width, canvas.height);
-  effect.draw(10);
+  effect.draw(5);
 }
