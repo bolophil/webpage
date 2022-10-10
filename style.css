@@ -129,6 +129,7 @@ padding: 12px 20px;
 }
 .control{
   display: flex;
+  color:#000;
 }
 .control > input{
   border: 2px solid gray;
@@ -142,3 +143,6 @@ padding: 12px 20px;
   background: black;
   border: 5px solid tan
 } 
+body{
+  background-color: whitesmoke;
+}

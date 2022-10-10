@@ -13,7 +13,7 @@ const image1 = new Image();
 //image1.src = 'pexels-photo-1108099.jpeg';
 //image1.src = '5616.jpg';
 var keys = document.getElementById("key");
-var button=document.getElementById("sb");
+var button= document.getElementById("sb");
 function searchfun(){
   var xhr = new XMLHttpRequest();       
     xhr.open("GET", keys.value, true); 
@@ -25,16 +25,17 @@ function searchfun(){
           image1.src = res;
       }
       var file = this.response;
-      reader.readAsDataURL(file)
+      reader.readAsDataURL(file);
     };
     xhr.send()
  
 }
-
+if(button){
 button.addEventListener('click', searchfun);
-
+}
 const image_input = document.getElementById("image_input");
 var uploaded_image = "";
+if(image_input){
 image_input.addEventListener("change", function(){
   const reader = new FileReader();
   reader.addEventListener("load", ()=>{
@@ -43,7 +44,7 @@ image_input.addEventListener("change", function(){
   });
   reader.readAsDataURL(this.files[0]);
 });
-
+}
 
 
 
@@ -141,4 +142,11 @@ image1.onload = function initialize(){
   canvas.height = image1.height;
   effect = new Ascii(ctx, canvas.width, canvas.height);
   effect.draw(5);
+}
+
+function download(){
+  const imageLink = document.createElement('a');
+  imageLink.download = 'canvas.png'
+  imageLink.href = canvas.toDataURL('image/png',1);
+  imageLink.click();
 }

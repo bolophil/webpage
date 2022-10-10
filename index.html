@@ -13,8 +13,6 @@
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
         <a href="contact.html">Contact</a>
       </div>
       <div id="main">
@@ -26,16 +24,16 @@
         <input type="text" id="key" placeholder="Add url image">
         <input type="button" id="sb" value="Submit">
      </form>
-     <p>or</p>
-     <input type="file" id="image_input" >
+     <br>
+        <input type="file" id="image_input" >
       </div>
     <div class="container">
      <canvas id = "canvas1"></canvas>
-    
      <div class="control">
         <label for="resolution" id="resolutionLabel">Resolution</label>
         <input type="range" id="resolution" name="resolution" min="1" max="20" value="5">
      </div>
+     <button onclick="download()">Download</button>
      </div>
      <script src="script.js" ></script
 </body>
