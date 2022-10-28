@@ -7,34 +7,42 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
       <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </div>
       <div id="main">
-        <button class="openbtn" onclick="openNav()">&#9776; MENU</button>
-        
+        <button class="openbtn" onclick="openNav()">&#9776; MENU</button>   
       </div>
+    
+      <div class="source-input">
+        <p>Provide image url soure:</p>
+        <form id="search" method="get" action="">
+          <input type="text" id="key" placeholder="Add url image">
+          <input type="button" id="sb" value="Submit">
+       </form>
+       <p>Upload image from your local machine:</p>
+          <input type="file" id="image_input" ><br>
+        <a href="search.html">Search for an image</a>
+      </div>
+    
+
       
-      <form id="search" method="get" action="">
-        <input type="text" id="key" placeholder="Add url image">
-        <input type="button" id="sb" value="Submit">
-     </form>
-     <br>
-        <input type="file" id="image_input" >
-      </div>
     <div class="container">
+   
      <canvas id = "canvas1"></canvas>
      <div class="control">
         <label for="resolution" id="resolutionLabel">Resolution</label>
         <input type="range" id="resolution" name="resolution" min="1" max="20" value="5">
      </div>
-     <button onclick="download()">Download</button>
+     <button onclick="download()" style="border-radius : 20px;">Download</button>
      </div>
-     <script src="script.js" ></script
+    
+     
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="script.js" ></script
 </html>

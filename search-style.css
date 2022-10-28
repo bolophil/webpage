@@ -1,0 +1,138 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(180, 166, 166);
+}
+img{
+  width: 70%;
+  height: 100%;
+  object-fit: cover;
+}
+section{
+  min-height:100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 100px 0;
+}
+.container{
+  background-color: transparent;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 61px 7px #5e849c40;
+  padding: 50px 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+form{
+  margin-top: 30px;
+  width: 100%;
+  max-width: 300px;
+  position: relative;
+  text-align: center;
+}
+input{
+  border: none;
+  border-bottom: 2px solid black;
+  font-size: 20px;
+  width: 100%;
+  outline: none;
+  color: black;
+  background-color: transparent;
+}
+input::placeholder{
+  opacity: .5;
+  color: black;
+}
+form ion-icon{
+  position: absolute;
+  right: 0;
+  font-size: 20px;
+  opacity: .5;
+  color: black;
+}
+.gallery{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) ;
+  margin-top: 50px;
+  grid-gap: 20px;
+}
+.item{
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  border-radius:8px;
+  transition: .3s ease box-shadow;
+}
+
+.item:hover{
+  box-shadow: 0px 0px 20px 3px #00000042;
+}
+.item:nth-last-child(1){
+  margin-bottom: 0;
+}
+
+.load-more{
+  display: inline-block;
+  margin-top:30px;
+  padding: 20px 50px;
+  background-color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: azure;
+  font-weight: 500;
+  cursor: pointer;
+}
+@media only screen and (min-width: 900px){
+ .container{
+   max-width: 1160px;
+   padding: 100px;
+ }
+ .header{
+   color: black;
+   flex-direction: row;
+   justify-content: space-between;
+ }
+ .header input{
+   font-size: 24px;
+ }
+ .header ion-icon{
+   font-size: 24px;
+ }
+ .gallery{
+   grid-gap: 30px;
+ }
+ 
+}
+
+.box {
+  flex: 1 1 2rem;
+  margin: 10px 20px;
+  padding: 8px 5px;
+
+  /* This makes them line up at the top of each row */
+  align-self: normal;
+
+  /* Makes each result a flex container and lines them up as a centered column */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: rgba(128, 128, 128, 0.148); */
+
+  background-color: #d7e6d509;
+  min-width: 260px;
+  max-width: 260px;
+}
+p{
+  font-size:x-small
+}
