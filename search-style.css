@@ -6,7 +6,7 @@
 }
 
 body{
-  background-color: rgb(180, 166, 166);
+  background: linear-gradient(to top right, #663300 0%, #999966 100%);
 }
 img{
   width: 70%;
@@ -133,6 +133,52 @@ form ion-icon{
   min-width: 260px;
   max-width: 260px;
 }
-p{
-  font-size:x-small
+
+.box::after {
+	content: "Click to copy URL";
+	color: #000;
+	background-color: #dcc95e;
+	cursor: pointer;
+	padding: 3px 10px;
+	position: absolute;
+	bottom:0;
+}
+
+/*  */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }

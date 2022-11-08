@@ -147,8 +147,7 @@ padding: 12px 20px;
   width:35%;
 }
 canvas {
-  max-height: 400px;
-  max-width:  480px;
+  max-height: 520px;
   background: black;
   border: 5px solid tan
 } 
@@ -157,6 +156,16 @@ body{
   display:block;
   justify-content: center;
   position: relative;
-  background-color: rgb(180, 166, 166);
+  background: linear-gradient(to top right, #663300 0%, #999966 100%);
 }
-
+.source-input{
+  font-size:20px;
+  padding: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: 50%;
+  box-sizing: border-box;
+}

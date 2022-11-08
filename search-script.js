@@ -1,3 +1,5 @@
+
+
 class PhotoGallery{
     constructor(){
       this.API_KEY = '563492ad6f91700001000001169f575e77e147ed8561368fb50b5407';
@@ -44,11 +46,13 @@ class PhotoGallery{
         const item= document.createElement('div');
         item.classList.add('item');
         item.innerHTML = `
-        <div class="box">
+        <div class="box" value="${photo.src.large}" >
             <a href='${photo.src.original}' target="_blank">
             <img src="${photo.src.medium}">
             </a> 
-            <p><strong>URL: </strong>${photo.src.medium}</p>
+            <div class="tooltip">
+<span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+</div>
         </div>
         `;
         
@@ -85,4 +89,24 @@ class PhotoGallery{
     }
   }
   
-  const gallery = new PhotoGallery;
+const gallery = new PhotoGallery;
+
+document.querySelectorAll(".gallery").forEach(item => {
+	item.addEventListener("click", async (event) => {
+		if (!navigator.clipboard) {
+			// Clipboard API not available
+			return;
+		}
+		try {
+      let url = event.target.getAttribute('value');
+			await navigator.clipboard.writeText(url);
+			alert("Copied to clipboard");
+			
+			var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copied"
+			
+		} catch (err) {
+			console.error("Failed to copy!", err);
+		}
+	});
+});
