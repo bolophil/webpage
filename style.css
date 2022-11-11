@@ -159,13 +159,15 @@ body{
   background: linear-gradient(to top right, #663300 0%, #999966 100%);
 }
 .source-input{
+  text-align: center;
   font-size:20px;
   padding: 15px;
   margin-top: 5px;
   margin-bottom: 5px;
+  margin-left: 15px;
   font-size: 20px;
   border: 1px solid #000;
   border-radius: 5px;
-  width: 50%;
+  width: 40%;
   box-sizing: border-box;
 }
